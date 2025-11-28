@@ -6,6 +6,9 @@ set -e
 # Root directory (default to current directory if none provided)
 ROOT_DIR="${1:-.}"
 
+# Destination directory
+DEST_DIR="$HOME/Desktop/hyfedotcom.github.io"
+
 # Path to style.css (assumed to be in ROOT_DIR)
 STYLE_FILE="$ROOT_DIR/style.css"
 
@@ -35,6 +38,14 @@ EOF
     pandoc "$mdfile" -o "$htmlfile" --css "$css_rel_path" --standalone
 
 done
+
+echo "Conversion complete. Copying all contents to $DEST_DIR ..."
+
+# Create destination directory if it doesn't exist
+mkdir -p "$DEST_DIR"
+
+# Copy entire folder contents into target directory
+rsync -av "$ROOT_DIR"/ "$DEST_DIR"/
 
 echo "Done!"
 
