@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>accuracy</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="cough-detection-accuracy-on-human-labeled-audio-files">Cough
+detection accuracy on human-labeled audio files</h1>
+<p>Prior to the acceptance of a candidate model being passed on for
+field testing, it must first outperform other models in testing on audio
+files with known high-reliability labels.</p>
+<p>For this purpose, there is a specific “holdout” dataset (meaning that
+the model was not trained on these audio) consisting of data with the
+following characteristics and provenance:</p>
+<ul>
+<li>ID206: 1545 coughs and 544.2 minutes of non-cough sounds.</li>
+<li>Domino watch: 248 coughs and 503.8 minutes of non-cough sounds.</li>
+<li>Phone: 715 coughs and 348.5 minutes of non-cough sounds.</li>
+</ul>
+<p>The candidate model is run over all sounds from the hold-out dataset.
+Sensitivity to cough and false positives per hour are calculated at
+varying thresholds. The optimal threshold is considered via visual
+analysis, striving to approximate 90% sensitivity while keeping false
+positives at a low rate.</p>
+<p>Further details regarding this process and results are available upon
+request.</p>
+</body>
+</html>

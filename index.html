@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>index</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<p><link rel="stylesheet" href="style.css"></p>
+<h1 id="hyfe-coughmonitor-suite-cms-v3-evidence-dossier">Hyfe
+CoughMonitor Suite (CMS) V3+ Evidence Dossier</h1>
+<hr />
+<h2 id="verification-v1">Verification (V1)</h2>
+<p>Verification ensures that the hardware and firmware of the device
+correctly capture, store, and transmit the raw data they are designed to
+collect—specifically, (i) acoustic signals containing cough (and
+non-cough sounds), (ii) important events such as charging vs
+non-charging, (iii) reflected light from the PPG sensor (used to
+determine wear vs non-wear), and (iv) accurate timestamps associated
+with the aforementioned elements so as to be able to appropriately
+contextualize them.</p>
+<p>Verification at Hyfe addresses whether the system meets its
+engineering specifications and that its components work as intended. In
+this phase, testing confirms that what the device captures is faithful
+to the physical reality of the events (cough, charge, etc.) and states
+(battery level, monitoring on/off, etc.) under a range of expected
+operating conditions.</p>
+<p>What follows are tests, experiments, and processes carried out by
+Hyfe to verify the proper functioning of the system’s sensors and data
+capture/storage/transmission capabilities.</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 38%" />
+<col style="width: 40%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Document Type</th>
+<th>Document Name</th>
+<th>Brief Description</th>
+<th>Further Documents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test Result</td>
+<td><a href="docs/gain.html">Equivalence of uniform gain across
+microphones</a></td>
+<td>Tests consistency of gain levels across device microphones.</td>
+<td>MSM261D3526Z1CM microphone data sheet</td>
+</tr>
+<tr class="even">
+<td>Test Result</td>
+<td><a href="docs/frc.html">Equivalence of microphone frequency-response
+curve</a></td>
+<td>Evaluates consistency of frequency response curves across
+microphones.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Test Result</td>
+<td><a href="docs/environmental.html">Environmental durability</a></td>
+<td>Assesses device durability across environmental conditions.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Test Result</td>
+<td><a href="docs/preflight.html">Pre‑flight tests</a></td>
+<td>Routine tests ensuring hardware and firmware readiness
+pre‑deployment.</td>
+<td>Test-architecture; Pre-flight checklist; Test rig</td>
+</tr>
+<tr class="odd">
+<td>SOP / Requirements</td>
+<td><a href="docs/requirements.html">Software Requirements
+Specifications</a></td>
+<td>Defines software functional and non-functional requirements.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>QMS / Validation</td>
+<td><a href="docs/qms.html">Quality management and design
+validation</a></td>
+<td>Documents QMS processes and design validation framework.</td>
+<td>Quality policy; Design validation protocol —</td>
+</tr>
+<tr class="odd">
+<td>Traceability</td>
+<td><a href="docs/traceability.html">Requirements traceability</a></td>
+<td>Maps requirements to tests ensuring coverage.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Safety Verification</td>
+<td><a href="docs/electrical.html">Electrical safety
+verification</a></td>
+<td>Documents tests ensuring compliance with electrical safety
+standards.</td>
+<td>Electrical safety testing report</td>
+</tr>
+<tr class="odd">
+<td>Cybersecurity</td>
+<td><a href="docs/cybersecurity.html">Cybersecurity
+verification</a></td>
+<td>Evaluates cybersecurity protections and testing.</td>
+<td>Cybersecurity reports for Android, iOS, and API</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="analytical-validation-v2">Analytical Validation (V2)</h2>
+<p>Analytical validation determines whether the algorithmic detection of
+coughs from raw audio is accurate, precise, and reliable compared to a
+trusted reference (e.g., human-annotated audio). It asks whether the
+digital measure— both event-specific detections and aggregated “number
+of coughs per hour”—faithfully represents reality and behaves
+consistently across users, devices, and environments. For cough, this
+step evaluates algorithm performance (sensitivity, specificity, false
+positives, robustness) and ensures the signal processing pipeline
+translates verified inputs into valid, quantitative outputs. In short,
+it proves that the measure itself is scientifically sound.</p>
+<p>Analytical validation at Hyfe goes beyond just coughs. It also
+includes the accuracy, precision, reliability, and generalizability of
+both (i) the PPG-based wear vs non-wear algorithm, and (ii) the
+motion-derived wear vs non-wear algorithm.</p>
+<p>What follows are items of evidence pertaining to the analytical
+validation of the algorithms used in the CMS.</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 42%" />
+<col style="width: 25%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Document Type</th>
+<th>Document Name</th>
+<th>Brief Description</th>
+<th>Further Documents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Protocol</td>
+<td><a href="docs/labeling.html">Establishment of ground truth: labeling
+protocol</a></td>
+<td>Describes labeling procedure for human-annotated cough audio.</td>
+<td>Labeling SOP</td>
+</tr>
+<tr class="even">
+<td>Test Result</td>
+<td><a href="docs/inter.html">Inter/intra-labeler agreement in cough
+labeling</a></td>
+<td>Measures labeling consistency across and within annotators.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Test Result</td>
+<td><a href="docs/accuracy.html">Cough detection accuracy on
+human-labeled audio files</a></td>
+<td>Benchmarks algorithm performance on annotated audio.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Field Test</td>
+<td><a href="docs/field.html">Cough detection accuracy in human field
+tests</a></td>
+<td>Tests algorithm accuracy in field deployment.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Test Result</td>
+<td><a href="docs/distance.html">Effect of distance on cough
+detection</a></td>
+<td>Examines how distance from device impacts accuracy.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Test Result</td>
+<td><a href="docs/opc.html">Effect of non-user coughs on user cough
+counts</a></td>
+<td>Quantifies influence of other people’s coughs on results.</td>
+<td>White paper; poster</td>
+</tr>
+<tr class="odd">
+<td>Test Result</td>
+<td><a href="docs/garments.html">Effect of garment obstruction/muffling
+on cough detection</a></td>
+<td>Evaluates effects of clothing barriers. (in progress)</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Test Result</td>
+<td><a href="docs/volume.html">Effect of cough volume on cough
+detection</a></td>
+<td>Analyzes impact of cough loudness on detection. (in progress)</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Version Control</td>
+<td><a href="docs/version.html">Version control &amp; change management
+for model</a></td>
+<td>Documents model version tracking and update processes.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Performance Standard</td>
+<td><a href="docs/performance.html">Performance / acceptability
+thresholds</a></td>
+<td>Defines acceptable analytical performance thresholds.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Validation</td>
+<td><a href="docs/choi.html">Wear vs non-wear: validation of Choi et
+al</a></td>
+<td>Validates Choi et al algorithm for wear detection.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Validation</td>
+<td><a href="docs/ppg.html">Wear vs non-wear: validation of Hyfe’s PPG
+based algorithm</a></td>
+<td>Validates Hyfe-specific PPG wear detection method.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Characterization</td>
+<td><a href="docs/failure.html">Characterization of known failure
+conditions: false positives and false negatives</a></td>
+<td>Describes qualitative evaluation of contexts for incorrect
+data.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Characterization</td>
+<td>Characterization of periods of expected poor performance (in
+progress)</td>
+<td>Identifies known circumstances of reduced accuracy.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Characterization</td>
+<td>Time drift (in progress)</td>
+<td>Investigates timestamp drift and synchronization issues.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Challenge Testing</td>
+<td>Challenge testing (in progress)</td>
+<td>Documents stress and edge-case challenge testing.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Protocol</td>
+<td><a href="docs/protocol.html">Protocol for Dispersed Clinical
+Validation of the Hyfe Cough Monitoring System</a></td>
+<td>Details protocol for dispersed clinical validation.</td>
+<td>Test Rig Architecture (linked within doc if applicable)</td>
+</tr>
+<tr class="even">
+<td>Clinical Results</td>
+<td><a href="docs/fda.html">Results from Dispersed Clinical Validation
+of the Hyfe Cough Monitoring System</a></td>
+<td>Reports results from dispersed clinical validation study.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="clinical-validation-v3">Clinical Validation (V3)</h2>
+<p>Clinical validation tests whether the measurements generated by the
+device are meaningful in the intended medical context—that is, whether
+they reflect clinically relevant outcomes or changes in a patient’s
+health. For a cough monitor, this means showing that measured cough
+frequency correlates with disease severity, treatment response, or
+quality of life, and that observed changes align with clinician or
+patient perception. This phase confirms that the digital cough measure
+provides actionable clinical insight, beyond mere technical accuracy,
+and supports its use in patient monitoring or decision-making.</p>
+<p>The following contains information on the clinical meaningfulness of
+the CMS’ measurements.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 43%" />
+<col style="width: 36%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Document Type</th>
+<th>Document Name</th>
+<th>Brief Description</th>
+<th>Further Documents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Evidence Summary</td>
+<td><a href="docs/meaningfulness.html">Meaningfulness to patients &amp;
+clinicians</a></td>
+<td>Demonstrates relevance and interpretability of measures.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Validation</td>
+<td><a href="docs/reliability.html">Reliability &amp; responsiveness in
+target population</a></td>
+<td>Presents reliability and responsiveness metrics.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Correlation Study</td>
+<td><a href="docs/endpoint.html">Endpoint correlation</a></td>
+<td>Shows correlation between cough metrics and clinical endpoints.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>MCID</td>
+<td><a href="docs/mcid.html">Minimal clinically important difference
+estimation (MCID)</a></td>
+<td>Estimates MCID for cough frequency changes.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>RWE</td>
+<td><a href="docs/realworld.html">Real-world implementation
+impact</a></td>
+<td>Evaluates device performance and impact in real-world use (in
+progress).</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Comparison</td>
+<td><a href="docs/recall.html">Comparison with patient recall</a></td>
+<td>Compares measured cough vs patient recall accuracy.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Usage Study</td>
+<td><a href="docs/duration.html">Monitoring duration</a></td>
+<td>Evaluates optimal monitoring duration for clinical insight.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="usability-validation-v3">Usability validation (V3+)</h2>
+<p>Usability validation ensures that intended users can successfully and
+safely use the cough monitor in the real world, under realistic
+conditions. It covers human-factors engineering: setup, donning,
+charging, syncing data, and understanding feedback—all without
+introducing errors that compromise data quality or safety. For Hyfe’s
+wrist-based device, this means confirming that typical users (patients,
+clinicians, researchers) can wear and operate the device correctly,
+leading to reliable data capture and analytical understanding with
+minimal support.</p>
+<p>What follows are evidence points demonstrating that the technology
+which forms the CMS is usable, acceptable, and scalable in its intended
+population and context.</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 28%" />
+<col style="width: 36%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Document Type</th>
+<th>Document Name</th>
+<th>Brief Description</th>
+<th>Further Documents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Summary</td>
+<td><a href="docs/usability.html">Usability summary</a></td>
+<td>Summarizes usability testing findings.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>User Materials</td>
+<td><a href="docs/usermaterials.html">User‑facing materials</a></td>
+<td>Recruitment/onboarding/IFU materials supporting HFE work.</td>
+<td>Informed consent template; Participant brochure; Site manual; Site
+online training manual</td>
+</tr>
+<tr class="odd">
+<td>Specification</td>
+<td>Use specification for all user groups</td>
+<td>Defines user types, contexts, tasks.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>URRA</td>
+<td>Use-related risk analysis (URRA)</td>
+<td>Identifies hazards and mitigations.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Testing results</td>
+<td>Usability testing</td>
+<td>Iterative evaluation of usability pain points.</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Field Metrics</td>
+<td>Field adherence &amp; missing-data metrics</td>
+<td>Analyzes adherence and data completeness.</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Accessibility</td>
+<td>Accessibility &amp; inclusion evidence</td>
+<td>Evaluates usability across diverse populations.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</body>
+</html>

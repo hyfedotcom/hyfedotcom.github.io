@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>failure</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1
+id="characterization-of-failure-conditions-false-positives-and-false-negatives">Characterization
+of failure conditions: false positives and false negatives</h1>
+<p>Data from <a href="(fda.html)">Hyfe’s clinical validation trial</a>
+show that the Hyfe CoughMonitor Suite (CMS) performs strongly across
+diverse real-world conditions, with accuracy varying naturally from
+participant to participant. This variability is expected in any acoustic
+sensing system and reflects two main factors:</p>
+<ol type="1">
+<li>Individual differences in cough acoustics, and<br />
+</li>
+<li>The wide range of everyday environments in which participants spent
+time.</li>
+</ol>
+<p>Importantly, the trial included challenging, uncommon scenarios—such
+as concerts, crowded indoor venues, power-tool use, loud kitchens,
+open-window driving, and breathing-machine use—so that performance
+statistics would reflect the full breadth of real daily living, not
+ideal conditions. These rare environments were “baked in” to the
+accuracy calculations, making the results conservative and strengthening
+confidence in Hyfe CMS performance during normal use.</p>
+<h2 id="false-negatives">False Negatives</h2>
+<p>Missed coughs occurred in situations that are not typical for most
+users, such as:</p>
+<ul>
+<li>Very quiet coughs masked by extremely loud background noise (e.g.,
+choir practices, group singing).<br />
+</li>
+<li>Highly atypical or unusual cough types (e.g., muffled or percussive
+throat-clear–like coughs that differ from standard cough
+acoustics).</li>
+</ul>
+<h2 id="false-positives">False positives</h2>
+<p>False cough detections were linked to a few specific, uncommon sound
+types:<br />
+- Laughter containing glottal bursts<br />
+- Non-cough throat clears<br />
+- Sharp, explosive household noises, such as dishwashing impacts</p>
+<p>These sounds are infrequent in most day-to-day settings, and the
+algorithm correctly handled them most of the time.</p>
+<h2 id="overall-interpretation">Overall Interpretation</h2>
+<p>Because Hyfe’s validation trial included high-noise, atypical, and
+acoustically extreme environments, the accuracy metrics represent a
+rigorous, real-world stress test rather than idealized performance. In
+typical home and daily environments—where coughing usually occurs—the
+CMS performs strongly and reliably, offering clinically meaningful
+detection accuracy.</p>
+<p>Clear labeling ensures that users understand the rare edge cases
+where performance may vary, but the overall findings demonstrate that
+the Hyfe CMS is a robust, high-quality cough monitoring system suitable
+for real-world clinical and personal use.</p>
+</body>
+</html>

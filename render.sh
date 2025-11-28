@@ -12,6 +12,9 @@ DEST_DIR="$HOME/Desktop/hyfedotcom.github.io"
 # Path to style.css (assumed to be in ROOT_DIR)
 STYLE_FILE="$ROOT_DIR/style.css"
 
+# delete gitignore
+DELETE_FILE="$DEST_DIR/.gitignore"
+
 if [ ! -f "$STYLE_FILE" ]; then
     echo "ERROR: $STYLE_FILE not found. Make sure style.css is in $ROOT_DIR"
     exit 1
@@ -46,6 +49,10 @@ mkdir -p "$DEST_DIR"
 
 # Copy entire folder contents into target directory
 rsync -av "$ROOT_DIR"/ "$DEST_DIR"/
+
+# Delete the git ignore in github pages
+echo "Deleting: $DELETE_FILE (from desktop)"
+rm "$DELETE_FILE"
 
 echo "Done!"
 

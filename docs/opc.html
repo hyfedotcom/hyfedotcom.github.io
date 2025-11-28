@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>opc</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="other-peoples-coughs">Other People’s Coughs</h1>
+<h2 id="context">Context</h2>
+<p>The Hyfe device demonstrates optimal performance when positioned on
+the wrist and within 3 ft (~100cm) of the person coughing. When used in
+real-world settings, its median accuracy includes a 90% sensitivity and
+an average of fewer than two false positives per hour. But questions
+have arisen regarding the extent to which the system captures non-user
+coughs. Hyfe has (a) carried out multiple experiments to quantify the
+effect on cough counts from contamination from non-user coughs and (b)
+written a white paper exploring options for addressing the
+phenomenon.</p>
+<h2 id="poster">Poster</h2>
+<p>This poster presents a study evaluating how often non-user coughs
+(coughs from people near the wearer) are unintentionally captured by the
+Hyfe CoughMonitor smartwatch and how these external coughs vary across
+real-world environments.</p>
+<h3 id="key-findings">Key Findings</h3>
+<p>Dataset:<br />
+223 hours (~10 days) of acoustic cough monitoring were analyzed from
+healthy volunteers in diverse environments.</p>
+<p>Main Result:<br />
+Non-participant cough exposure varied widely depending on location and
+context—from 0 coughs/hour in quiet indoor settings to 1.04 coughs/hour
+in public settings like restaurants or grocery stores.</p>
+<p>Example Real-World Scenarios:</p>
+<ul>
+<li>Office worker with a family: Exposure averaged 2.6 non-user
+coughs/day across home, office, and public spaces.<br />
+</li>
+<li>Business traveler: Exposure averaged 4.61 non-user coughs/day across
+hotels, planes, offices, and restaurants.</li>
+</ul>
+<h3 id="methods">Methods</h3>
+<p>Volunteers wore a Hyfe CoughMonitor smartwatch and recorded exactly
+when they themselves coughed.</p>
+<p>Analysts then compared smartwatch-detected coughs with participants’
+self-reports to identify and quantify non-user coughs (i.e., coughs not
+belonging to the wearer).</p>
+<p>Visuals in the poster (e.g., acoustic environment diagram on page 1)
+illustrate how non-user coughs are detected and distinguished.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This pilot study provides a framework for quantifying how often
+wearable microphones detect coughs from nearby individuals. Findings
+help clarify the real-world extent of “other people’s cough”
+contamination, supporting better interpretation of cough monitoring data
+from the Hyfe smartwatch.</p>
+<h3 id="link-to-poser-and-associated-abstract">Link to poser and
+associated abstract</h3>
+<p><a href="../pdfs/opc2.pdf" target="_blank">Poster on non-user
+coughs</a></p>
+<p><a href="https://publications.ersnet.org/content/erj/64/suppl68/pa789" target="_blank">Poster
+summary</a></p>
+<h2 id="white-paper">White paper</h2>
+<p>This paper examines the problem of other people’s coughs
+(OPCs)—coughs produced by people near a user but mistakenly recorded by
+a wearable cough monitor. Such contamination can distort measurements
+and undermine the clinical reliability of remote cough monitoring
+systems.</p>
+<p>###Key Points</p>
+<p>Motivation:<br />
+Wearable audio devices can automatically detect and count coughs for
+remote health monitoring. However, distinguishing the wearer’s cough
+from nearby coughs remains a major challenge, especially in shared
+environments.</p>
+<p>Prior Approaches:<br />
+Techniques such as “cougher verification” (analogous to speaker
+verification) and multimodal sensing (heart rate, accelerometry) can
+help, but they suffer from practical limitations, variability in cough
+sounds, noise, privacy concerns, and poor performance when the cougher
+is far from the microphone.</p>
+<p>Proposed Solution:<br />
+The authors focus on an audio-only, single-microphone solution using
+distance classification — identifying whether a cough is “near” (≤1 m)
+or “far” (&gt;1 m).</p>
+<p>Dataset:<br />
+They collected 1,207 coughs (829 near, 378 far) from 22 subjects,
+recorded at distances from 5–300 cm under varied environments and
+loudness levels. All audio was processed into Mel-frequency energy (MFE)
+representations.</p>
+<h3 id="models-tested">Models Tested:</h3>
+<p>Traditional ML: Logistic Regression, SVM, Random Forest, XGBoost.</p>
+<p>Deep Learning: Two convolutional neural networks (CNN1 = deep, CNN2 =
+shallow).</p>
+<h3 id="results">Results:</h3>
+<p>Classical ML models performed moderately well (best ROC-AUC ≈ 0.89
+for SVMs).</p>
+<p>Deep CNNs performed best, with CNN1 achieving a ROC-AUC of 0.94,
+along with high precision and sensitivity.</p>
+<p>This demonstrates that distance estimation from cough audio is
+feasible with good accuracy.</p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>The study shows that distinguishing between near and far coughs using
+only a smartwatch microphone is achievable. This could help filter out
+OPCs and improve the reliability of remote cough monitoring. Future work
+will require larger and more diverse datasets to ensure robustness in
+real-world deployment.</p>
+<h3 id="link-to-full-paper">Link to full paper</h3>
+<p><a href="../pdfs/opc.pdf" target="_blank">White Paper on Other
+People’s Coughs</a></p>
+</body>
+</html>

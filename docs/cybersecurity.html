@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>cybersecurity</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1
+id="cybersecurity-verification-for-the-hyfe-coughmonitoring-suite-cms">Cybersecurity
+Verification for the Hyfe CoughMonitoring Suite (CMS)</h1>
+<p>This document provides a consolidated summary of the cybersecurity
+assessments performed on the Hyfe CoughMonitor Suite (CMS), including
+the Android application, the iOS application, and the Insights API. The
+results across all three components indicate that the CMS platform is
+cybersecure, implements modern protections, and contains no critical
+vulnerabilities. The content below integrates the findings from the
+Android static analysis, the iOS static analysis, and the API
+penetration test. Citations reference the reviewed files.</p>
+<h2 id="scope-of-verification">1. Scope of Verification</h2>
+<p>The cybersecurity evaluations covered the core components of the CMS
+ecosystem:<br />
+- the Android application - the iOS application<br />
+- and the Insights API backend services</p>
+<p>Testing included static analysis, dynamic analysis, and penetration
+testing aligned with OWASP guidance. Each component was examined for
+encryption use, certificate configuration, data handling patterns,
+storage behaviors, network activity, authentication flows, and
+permission practices. All analyses were conducted on production or
+production-equivalent builds to ensure realistic characterization of
+risk.</p>
+<h2 id="overall-cybersecurity-conclusion">2. Overall Cybersecurity
+Conclusion</h2>
+<p>Across all testing activities, no critical or high-severity
+vulnerabilities were identified in any part of the CMS platform. All
+findings were low-severity or informational in nature and did not expose
+user data, compromise backend integrity, or threaten overall system
+security. The platform consistently uses encrypted communication,
+applies secure authentication mechanisms, and avoids dangerous
+data-handling behaviors. Based on the combined evidence from all three
+assessments, the CMS platform is considered secure for real-world use,
+including deployment in regulated health environments where
+cybersecurity protections are essential.</p>
+<h2 id="insights-api-security-verification">3. Insights API Security
+Verification</h2>
+<p>An OWASP-based penetration test was performed against the production
+Hyfe Insights API. The API demonstrated strong security fundamentals,
+including the use of modern encryption protocols such as TLS 1.2 and TLS
+1.3. Certificates were valid, properly configured, and not revoked.
+Access to all endpoints behaved as intended, and authentication and
+authorization controls operated correctly. The assessment identified
+only one medium-severity item: a permissive CORS configuration that
+allowed broader-than-necessary cross-origin requests. Several
+low-severity items were also noted, including the absence of an HSTS
+header and the absence of an X-Content-Type-Options header. None of
+these issues exposed sensitive data, enabled unauthorized access, or
+represented a meaningful security risk.</p>
+<h2 id="android-application-security-verification">4. Android
+Application Security Verification</h2>
+<p>The Android application review found no insecure permissions, no
+dangerous API calls, and no inappropriate network behaviors. The
+application did not contain malware, unsafe libraries, trackers, or
+data-exfiltration mechanisms. No hardcoded secrets or insecure storage
+patterns were discovered. All network interactions were properly routed
+through secure, encrypted API channels. The static analysis demonstrated
+that the Android app follows modern security practices and does not
+handle data in a manner that would compromise user privacy or system
+integrity.</p>
+<h2 id="ios-application-security-verification">5. iOS Application
+Security Verification</h2>
+<p>The iOS application achieved a security score of 85 out of 100 and
+contained zero trackers. This is considered “very secure” per general
+industry standards of:</p>
+<ul>
+<li>90–100 → Highly secure<br />
+</li>
+<li>80–89 → Very secure<br />
+</li>
+<li>65–79 → Secure / Acceptably secure with moderate issues<br />
+</li>
+<li>&lt;65 → Potentially insecure / significant issues</li>
+</ul>
+<p>The score means o critical vulnerabilities, no high-risk issues, only
+minor or low-risk findings, reliable configuration and a strong privacy
+posture.</p>
+<p>The assessment found no dangerous permissions, no violations of
+Apple’s App Transport Security requirements, and no high-severity risks.
+Two informational findings were noted: the use of a database library in
+a manner that should ensure sensitive information is encrypted, and
+logging patterns that should avoid capturing sensitive data. These
+issues did not involve actual data exposure or insecure storage in the
+tested configuration. The iOS application contained no malware, unsafe
+code patterns, hardcoded secrets, or insecure networking activity. All
+communications traveled through encrypted channels to the secure
+backend.</p>
+<h2 id="integrated-security-assessment">6. Integrated Security
+Assessment</h2>
+<p>Taken together, the results from the API, Android application, and
+iOS application assessments show consistent security practices across
+the CMS platform. All components rely on encrypted communication,
+maintain secure storage behaviors, and avoid patterns that would put
+confidential data at risk. The limited findings identified across the
+assessments were configuration-related and minor, rather than functional
+vulnerabilities or exploitable weaknesses. No component demonstrated
+behavior that would threaten confidentiality, integrity, or
+availability. The overall security posture of the CMS platform is strong
+and well-aligned with modern healthcare cybersecurity expectations.</p>
+<h2 id="final-determination">7. Final Determination</h2>
+<p>Based on independent testing of the Insights API, Android
+application, and iOS application, the CMS meets contemporary
+cybersecurity requirements and demonstrates no critical risks. The
+system is considered cybersecure and appropriate for deployment in
+environments that require reliable protection of health-related
+data.</p>
+<h2 id="reports">Reports</h2>
+<p>See below for full reports.</p>
+<p><a href="../pdfs/cybersecurity_android.pdf" target="_blank">Android
+Cybersecurity</a></p>
+<p><a href="../pdfs/cybersecurity_ios.pdf" target="_blank">iOS
+Cybersecurity</a></p>
+<p><a href="../pdfs/cybersecurity_api.pdf" target="_blank">API
+Cybersecurity</a></p>
+</body>
+</html>

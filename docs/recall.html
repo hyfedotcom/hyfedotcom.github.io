@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>recall</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="objective-cough-counting-vs-patient-recall">Objective
+cough-counting vs patient recall</h1>
+<p>Cough is a highly variable and unpredictable behavior, making it
+extremely difficult for clinicians to estimate cough frequency through
+direct observation. Even at the highest cough rate documented in Hyfe’s
+validation study (111 coughs/hour), a clinician would need to observe a
+patient for many hours to achieve even a minimally reliable estimate—an
+unrealistic approach in real-world medical practice.</p>
+<p>Because direct observation is impractical, the current clinical “gold
+standard” for cough frequency is patient recall. However, extensive
+evidence—including prior research (e.g., Decalmer 2007)—shows that
+recall is highly unreliable, particularly over long periods. Hyfe’s
+validation study further confirms this: when nine departing participants
+were asked to estimate how many times they coughed during the study, two
+could not provide a number at all and seven gave widely inaccurate
+estimates. Except for one low-cough participant, system estimates
+aligned far more closely with ground truth than patient recall did (as
+illustrated in the below figure).</p>
+<p><img src="../img/recall1.png" /></p>
+<p>Taken together, these results show that system accuracy must be
+judged relative to the available alternative—not in isolation. Since
+patient recall is significantly less accurate and far less granular,
+relying on it carries greater risk, including potential mismanagement of
+medications tied to cough severity. While clinicians may be accustomed
+to the limitations of recall, the system provides transparent accuracy
+labeling and more reliable objective data, offering a safer and more
+informative basis for clinical decision-making.</p>
+</body>
+</html>

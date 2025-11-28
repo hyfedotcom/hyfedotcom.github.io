@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>preflight</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1
+id="pre-flight-microphone-verification-controlled-playback-ambient-noise-robustness-and-test-rig-evaluation">Pre-Flight
+Microphone Verification: Controlled Playback, Ambient-Noise Robustness,
+and Test-Rig Evaluation</h1>
+<p>Prior to deployment in research or production environments, Hyfe
+performs pre-flight microphone verification testing to ensure that each
+device’s acoustic sensing pathway meets engineering specifications
+required for reliable cough-like event capture. These tests are
+conducted using a standardized test-rig and controlled acoustic stimuli,
+enabling precise, repeatable assessment of microphone functionality
+under well-defined conditions. These tests also confirm the proper
+functioning of other, non-acoustic components of the device, including
+those pertaining to connectivity, display, data transmission, battery,
+and logging. The objective of the pre-flight process is to validate that
+the sensors can faithfully record cough-like impulsive sounds and
+maintain performance in the presence of expected environmental noise,
+thereby confirming their readiness for field use.</p>
+<h2 id="controlled-playback-of-cough-like-acoustic-stimuli">Controlled
+Playback of Cough-Like Acoustic Stimuli</h2>
+<p>The core component of the pre-flight protocol involves exposing
+devices to synthetic cough-like audio events played through a calibrated
+loudspeaker system. The stimuli emulate the broadband impulsive spectral
+characteristics of human coughs, including rapid onset, short duration,
+and multi-frequency content between approximately 100–3,500 Hz. Playback
+occurs within an acoustically controlled environment to ensure
+consistent delivery of sound energy across repetitions.</p>
+<p>During testing, devices are placed in standardized orientations and
+distances relative to the source to eliminate spatial variability. Audio
+of real-world recorded coughs is played via speakers, and detections are
+quantified. Devices that do not fall within range are discarded.</p>
+<h2
+id="assessment-of-robustness-to-non-cough-acoustic-stimuli">Assessment
+of robustness to non-cough acoustic stimuli</h2>
+<p>To ensure robustness under realistic environmental conditions, Hyfe
+incorporates ambient-noise exposure testing as an integral component of
+the pre-flight evaluation. Background noise typical of real-world
+settings—such as HVAC hum, distant conversation, and broadband
+environmental noise—is introduced at controlled and repeatable
+levels.</p>
+<p>During this phase, devices are expected to detect a very low number
+of coughs (false positives). Devices that do not fall within range are
+discarded.</p>
+<h2 id="use-of-standardized-acoustic-test-rig">Use of Standardized
+Acoustic Test-Rig</h2>
+<p>All pre-flight testing is conducted using a standardized test-rig,
+engineered to provide consistent, reproducible test conditions and
+eliminate operator-dependent variability. The test-rig incorporates:</p>
+<ul>
+<li>Calibrated sound-source alignment for precise acoustic delivery</li>
+<li>Controlled environmental settings (acoustic damping)</li>
+<li>Automated playback and logging procedures to minimize human
+error</li>
+</ul>
+<p>This standardized infrastructure ensures that the verification
+process is traceable, reproducible, and aligned with established
+engineering quality practices. The use of a dedicated test-rig
+strengthens the reliability of pre-flight assessments and provides
+documented evidence that devices meet design specifications prior to use
+in research settings.</p>
+<h2
+id="confirmation-of-compliance-with-engineering-specifications">Confirmation
+of Compliance With Engineering Specifications</h2>
+<p>Integrating controlled playback, ambient-noise robustness testing,
+and test-rig standardization, Hyfe’s pre-flight microphone verification
+procedure provides comprehensive confirmation that devices are able to
+reliably capture cough-like acoustic events with the fidelity required
+for downstream algorithmic processing. Passing these tests demonstrates
+that:</p>
+<ul>
+<li>Microphones perform within defined sensitivity and
+frequency-response specifications</li>
+<li>Sensors preserve critical acoustic features required for cough
+detection</li>
+<li>Environmental noise does not meaningfully impair data capture</li>
+<li>Devices are suitable for immediate deployment without further
+calibration</li>
+</ul>
+<p>In summary, Hyfe’s pre-flight microphone verification ensures that
+every device undergoes rigorous, standardized testing prior to study
+deployment, establishing a high level of confidence in microphone
+integrity and acoustic data quality. This process contributes directly
+to reliable cough detection performance in real-world and clinical
+research environments.</p>
+<h2 id="further-documentation">Further documentation</h2>
+<p>Detailed docmentation is available on the testing architecture, the
+pre-flight checklist, and the test rig itself, below.</p>
+<p><a href="../pdfs/test_architecture.pdf" target="_blank">Test
+architecture</a></p>
+<p><a href="../pdfs/pre_flight_checklist.pdf" target="_blank">Pre-flight
+checklist</a></p>
+<p><a href="../pdfs/test_rig.pdf" target="_blank">Test rig</a></p>
+</body>
+</html>

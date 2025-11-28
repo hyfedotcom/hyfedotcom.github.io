@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>volume</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="effect-of-volume-on-cough-detection">Effect of volume on cough
+detection</h1>
+<h2 id="context">Context</h2>
+<p>Acoustic cough detection algorithms depend on the reliable capture
+audio events, ie vibrations in the air. The effective amplitude of these
+vibrations is strongly influenced by the sound pressure level (SPL) of
+the cough at the source. Variability in cough volume—between
+individuals, within individuals across contexts, and across disease
+states—introduces significant challenges for consistent detection.</p>
+<ol type="1">
+<li>Reduced SNR and Subthreshold Events</li>
+</ol>
+<p>Coughs vary in amplitude over a broad dynamic range (30–40 dB
+within-person differences are common).</p>
+<p>Quieter coughs (low SPL) produce weaker mechanical–acoustic energy
+transmitted through the air.</p>
+<p>These signals may fall near or below the sensor’s noise floor,
+yielding a poor signal-to-noise ratio (SNR) and making peak detection or
+subsequent classification unreliable.</p>
+<p>Such subthreshold or low-SNR coughs may be particularly common in
+those with small lungs (children), fatigued patients, or individuals
+with obstructive lung disease.</p>
+<ol start="2" type="1">
+<li>Variability in Spectral and Temporal Features</li>
+</ol>
+<p>Cough SPL affects not only amplitude but also the shape of the
+acoustic waveform:</p>
+<p>Higher-volume coughs typically exhibit sharper transients, stronger
+high-frequency energy, and more distinct multi-phase structure.</p>
+<p>Low-volume coughs may appear muted, temporally smeared, or spectrally
+compressed.</p>
+<p>Algorithms trained on high-SPL events may misclassify low-SPL events
+because their feature distributions diverge.</p>
+<ol start="3" type="1">
+<li>Influence of Context and Physiology</li>
+</ol>
+<p>Cough loudness is influenced by biological, contextual, and
+behavioural factors:</p>
+<ul>
+<li>Disease state (e.g., weak, fatigued, or muffled cough in advanced
+disease)<br />
+</li>
+<li>Posture (supine vs upright)<br />
+</li>
+<li>Voluntary vs reflexive cough<br />
+</li>
+<li>Social context (ie, intentional muffling or supression to avoid
+disruption of others)</li>
+</ul>
+<p>These factors create systematic SPL variations that can bias
+detection if the model does not account for volume.</p>
+<ol start="4" type="1">
+<li>Interaction With External Noise</li>
+</ol>
+<p>Low-SPL coughs are more susceptible to masking by environmental or
+garment-induced acoustic noise.</p>
+<p>In low-amplitude events, even mild artefacts (fabric friction, arm
+movement) can dominate the waveform.</p>
+<p>This increases false negatives, reduces temporal precision, and
+produces uncertainty in classifications.</p>
+<h2
+id="proposed-experiments-to-quantify-the-impact-of-cough-volume-on-acoustic-detection">Proposed
+Experiments to Quantify the Impact of Cough Volume on Acoustic
+Detection</h2>
+<p>To rigorously characterise how SPL affects wrist-based acoustic cough
+detection, a structured set of three experiments—progressing from
+controlled acoustic simulations to human studies and free-living
+validation—is proposed. This document will be updated upon the
+completion of these experiments in Q1 2026.</p>
+<h3
+id="experiment-1-controlled-human-study-with-standardised-cough-spl">Experiment
+1: Controlled Human Study With Standardised Cough SPL</h3>
+<p>Objective: Evaluate algorithmic performance across controlled cough
+volume levels in human participants.</p>
+<p>Design Overview:</p>
+<p>Participants perform voluntary coughs instructed to reach specific
+SPL bands (e.g., low, medium, high), monitored using a calibrated
+near-field microphone or spirometry-coupled cough meter.</p>
+<p>Perform coughs across postures (seated, standing) to capture natural
+within-person variability.</p>
+<p>Collect concurrent wrist acoustic signals and high-quality audio
+ground truth.</p>
+<p>Analyse:</p>
+<p>Sensitivity and precision as a function of SPL</p>
+<p>Feature distributions for low vs high SPL events</p>
+<p>Misclassification patterns driven by low-SPL coughs.</p>
+<p>Rationale: This experiment links SPL-dependent changes in the
+acoustic signal to actual algorithmic behaviour, enabling identification
+of vulnerability ranges.</p>
+<h3
+id="experiment-2-free-living-study-with-passive-spl-estimation">Experiment
+2: Free-Living Study With Passive SPL Estimation</h3>
+<p>Objective: Assess the role of cough volume in real-world wrist-based
+detection accuracy.</p>
+<p>Design Overview:</p>
+<p>Participants wear the wrist device continuously for several days.</p>
+<p>A subset uses an auxiliary audio reference (e.g., chest clip
+microphone or smartphone cough logger) capable of estimating relative
+SPL for labelled events.</p>
+<p>Real-world coughs are stratified into SPL categories (e.g., quiet,
+moderate, loud) based on reference measurements.</p>
+<p>Evaluate:</p>
+<p>Detection rates across SPL levels</p>
+<p>SPL–SNR interactions with environmental noise and activity</p>
+<p>Whether SPL-aware preprocessing (e.g., dynamic gain compensation)
+improves detection.</p>
+<p>Rationale: This quantifies the extent to which SPL
+variability—particularly the prevalence of mild, quiet, or suppressed
+coughs—limits performance under ecologically valid conditions.</p>
+<h2 id="summary">Summary</h2>
+<p>Cough SPL (volume, in decibels) critically shapes the detectability
+of body-borne acoustic signatures at the wrist. Low-SPL coughs produce
+weak, spectrally altered vibrations that are easily masked by noise and
+may fall below detection thresholds, while high-SPL coughs yield
+clearer, more discriminable features. The proposed two-stage
+experimental programme—controlled human studies with calibrated cough
+volumes, and free-living SPL-aware validation—enables a comprehensive
+characterisation of these effects and can inform the development of
+SPL-robust acoustic detection algorithms. As results come in from these
+experiments, results will be posted to this document.</p>
+</body>
+</html>

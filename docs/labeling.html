@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>labeling</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="standard-operating-procedure-for-labeling">Standard Operating
+Procedure for Labeling</h1>
+<p>The below is Hyfe’s Standard Operating Procedure (SOP) for
+understanding, identifying, and labeling cough and cough-like acoustic
+events within continuous audio recordings. It forms part of Hyfe’s
+formal Validation Documentation (2023) and establishes the
+methodological foundation for producing high-quality, standardized
+ground-truth datasets used in algorithm development and performance
+verification.</p>
+<p>This SOP is a comprehensive labeling manual that provides:</p>
+<ol type="1">
+<li>A Scientific Framework for Cough Physiology and Acoustics: The
+document begins with detailed explanations of cough anatomy and
+physiology—covering the pharynx, larynx, epiglottis, and vocal cords—and
+describes the acoustic waveforms associated with expulsive and vocal
+phases of coughs (pages 1–8). These diagrams and examples ensure that
+labelers understand not only what a cough sounds like, but why it sounds
+as it does biologically.</li>
+<li>A Rigorous Multi-Tier Labeling System: The SOP defines explicit
+labeling categories (COUGH, THROAT_CLEAR, SNEEZE, CRY) and a structured
+tag system (Far, Not Sure) to capture acoustic ambiguity or distance
+effects (pages 9–11). These categories and tags are consistently
+illustrated using examples and spectrograms.</li>
+<li>A Detailed Procedure for Consistent Annotation Using the Hyfe
+Continuous Labeling Web App: The document includes step-by-step
+instructions for opening, navigating, and labeling audio within Hyfe’s
+dedicated web application (pages 21–27). It prescribes zoom levels,
+selection methods, waveform inspection strategies, and use of
+spectrograms to ensure precise marking of beginnings and endings of
+events.</li>
+<li>Extensive Examples and Edge-Case Demonstrations: Many pages contain
+annotated cough, throat-clear, and sneeze examples (pages 11–20),
+reflecting real-world acoustic complexity. These examples serve as
+training material and calibration references for human annotators.</li>
+<li>A Formal Assessment and Competency Check for Labelers: The SOP
+includes a self-assessment questionnaire (pages 28–29) and defines a
+pass threshold (95%) for final evaluation before labelers are certified
+to contribute to gold-standard datasets.</li>
+</ol>
+<h2 id="why-this-document-is-critical-for-validation">Why This Document
+Is Critical for Validation</h2>
+<ol type="1">
+<li>It Ensures Ground Truth Is Consistent, Reproducible, and
+Scientifically Defensible: All accuracy assessments of Hyfe’s cough
+detection algorithms depend on a high-quality ground truth—i.e., precise
+timestamps and classifications of cough events. This SOP provides the
+instructions that guarantee consistency in: (i) identifying expulsive
+vs. vocal cough phases, (ii) distinguishing coughs from throat clears,
+sneezes, or mechanical sounds, (iii) determining episode boundaries and
+zoom-level expectations, and (iv) applying ambiguity and distance tags
+uniformly. Because algorithm performance metrics (sensitivity,
+specificity, PPV, etc.) are only as reliable as the annotations they are
+compared against, the SOP ensures that human labeling itself is
+validated, controlled, and standardized.</li>
+<li>It Defines the Gold-Standard Methodology Used Across All Validation
+Studies: As stated explicitly in the SOP (page 21), these annotations
+serve as the “gold standard by which Hyfe’s algorithms are compared.”
+This means: (i) Every validation dataset is created using the same
+procedures. (ii) Inter-annotator variability is minimized. (iii)
+Regulatory-grade reproducibility is ensured. Without this SOP, algorithm
+performance would risk being evaluated against inconsistent or
+subjective interpretations of cough sounds.</li>
+<li>It Provides Traceability and Auditability Required in Pharma-Facing
+Validation: Because this SOP is structured, version-controlled, and
+includes a competency review, it supports: (i) traceable labeling
+workflows, (ii) auditor-verifiable labeling practices, (iii) documented
+human-factors controls, and (iv) clear justification for the reliability
+of the ground truth used in accuracy studies. These characteristics are
+essential for medical-device or pharma partners who require assurance of
+methodological rigor.</li>
+<li>It Reduces Systematic Error and Bias in Annotation: By defining what
+a cough is, how it appears acoustically, and exactly how labelers should
+mark it, the SOP reduces: (i) false positives from similar explosive
+sounds, (ii) false negatives from subtle or distant coughs, (iii) bias
+resulting from inconsistent zoom levels or labeling strategies. This
+improves the quality of training and validation datasets, enabling more
+accurate and generalizable algorithmic performance.</li>
+</ol>
+<p>This document is a core validation asset for Hyfe’s cough detection
+system. It is not merely a labeling guide—it is a scientifically
+grounded, operationally rigorous methodology for generating reliable,
+reproducible ground truth, upon which all accuracy assessments,
+performance claims, and regulatory-grade validations ultimately
+depend.</p>
+<figure>
+<embed src="../pdfs/labeling_sop.pdf" />
+<figcaption aria-hidden="true">Labeling SOP</figcaption>
+</figure>
+<p><a href="../pdfs/labeling_sop.pdf" target="_blank">Labeling
+SOP</a></p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ppg</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="wear-vs-non-wear-detection-using-hyfes-ppg-based-algorithm">Wear
+vs non-wear detection using Hyfe’s PPG-based algorithm</h1>
+<p>Hyfe has created and validated a lightweight photoplethysmography
+(PPG)-based algorithm that reliably determines whether the CoughWatch
+smartwatch is being worn. Importantly, this method does not depend on
+accelerometer signals. Conventional accelerometer-driven wear-detection
+approaches often misclassify periods of inactivity (e.g., when a user is
+resting) as non-wear and typically require long observation windows to
+achieve acceptable accuracy.</p>
+<p>Hyfe’s approach periodically activates the PPG sensor for 20 seconds
+every 5 minutes, processes the resulting optical-reflection data with a
+simple decision-tree classifier, and delivers real-time wear status.
+Trained on approximately 100 person-hours and validated against over
+2,700 hours of human-annotated data, the algorithm demonstrated 98.93%
+overall accuracy, with 0.55% false negatives and 2.06% false positives.
+Battery consumption remained low, averaging 24.2% over 24 hours, which
+matches typical device usage.</p>
+<p>This advancement provides a high-frequency, low-burden, and highly
+precise method for monitoring device adherence, thereby improving the
+reliability of continuous physiological and behavioral data—an essential
+requirement for clinical trials and long-term observational studies.</p>
+<p>The Hyfe wear vs non-wear PPG-based algorithm has been validated. <a
+href="https://www.hyfe.com/white-papers/high-granularity-wear-detection-using-ppg-on-hyfes-coughwatch">Full
+details available here</a></p>
+</body>
+</html>

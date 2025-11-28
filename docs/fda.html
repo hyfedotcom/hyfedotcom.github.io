@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>fda</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="validation-trial">Validation trial</h1>
+<p>Hyfe carried out a dispersed, observational device accuracy study
+evaluating the Hyfe Cough Diary (HCD)—a wrist-worn, non-invasive,
+passive cough monitoring system designed to detect and timestamp cough
+events in adults with problematic cough. The study was conducted under
+real-world conditions in the United States between December 2024 and
+June 2025 and followed ICH-GCP, FDA regulations, and IRB approval. The
+study used the same device and algorithm used in the CMS.</p>
+<h2 id="study-design">Study Design</h2>
+<p>A decentralized prospective observational investigation in which each
+participant wore:<br />
+– the investigational Cough Watch (running Hyfe’s detection algorithm),
+and<br />
+– a second research smartwatch continuously recording ambient audio for
+human annotation.<br />
+– Participants were monitored over a continuous 24-hour period during
+their normal daily living activities.<br />
+– Human annotators labeled every cough in the full audio recordings
+(18,305 coughs), with disagreements adjudicated by an expert reviewer to
+produce a high-fidelity ground truth dataset.<br />
+– Comparison was performed at daily, hourly, and event levels,
+accounting for timestamp offsets and clock drift.<br />
+– Inclusion required ≥20 hours of valid simultaneous recordings; 31
+participants (730.84 person-hours) met criteria.</p>
+<h2 id="population-characteristics">Population Characteristics</h2>
+<p>– Adults ≥21 years old with problematic cough (mean age 57; 23
+female).<br />
+– Diverse etiologies were represented, including RCC/UCC (13), asthma
+(5), bronchiectasis (4), GERD (4), NTM (2), allergies (2), acute cough
+(2), laryngeal neuropathy (2), UACS (2), and others.<br />
+– Participants were recruited from typical living environments, with
+exclusion only for unusually loud settings or major antitussive therapy
+changes.</p>
+<h2 id="primary-and-secondary-objectives">Primary and Secondary
+Objectives</h2>
+<p>– Primary Objective: Assess hour-by-hour agreement between HCD and
+human annotators using Bland–Altman methods.<br />
+– Secondary Objectives:<br />
+– Event-level accuracy (sensitivity, false positives, PPV)<br />
+– Daily and hourly concordance via linear and Deming regression<br />
+– Subgroup, diurnal, and rate-stratified performance analyses.</p>
+<h2 id="key-clinical-results">Key Clinical Results</h2>
+<p>– Daily and hourly concordance: Lin’s Concordance Correlation
+Coefficient &gt;0.95 for both coughs and cough-seconds.<br />
+– Event-level detection:<br />
+- Median sensitivity 87.3% (coughs) and 90.5% (cough-seconds).<br />
+– False positives: Median ~1.7 per hour.<br />
+– Categorization accuracy:<br />
+– 84% correct category classification of patients (none off by &gt;1
+ordinal level).<br />
+– 78% correct hour-level classification; 95% correct or off by one
+level.<br />
+– Zero instances of long sequences of major misclassification.<br />
+– No adverse events, no device-related harms, and no device
+failures.</p>
+<h2 id="visual-summary">Visual summary</h2>
+<p>Agreement in hourly cough counts between two independent
+labelers:</p>
+<p><img src="../img/fda1.png" width="50%" /></p>
+<p>Patient-specific Hyfe vs ground truth cough counts:</p>
+<p><img src="../img/fda2.png" width="50%" /></p>
+<p>Correlation between daily cough counts, Hyfe vs ground truth:</p>
+<p><img src="../img/fda3.png" width="40%" /></p>
+<h2 id="full-report">Full report</h2>
+<p>https://docs.google.com/document/d/1GOAunJCbHu4t0gpaIQJkn_DWW9mg7MNmdVkt_vuvSTc/edit?usp=sharing</p>
+</body>
+</html>

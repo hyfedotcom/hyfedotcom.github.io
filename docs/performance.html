@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>performance</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="performance">Performance</h1>
+<h2 id="success-criteria">Success criteria</h2>
+<p>Hyfe’s performance has been assessed against a set of criteria
+established through an iterative survey/interview process with key
+opinion leaders and other stakeholders in the cough space in a study
+whose details are available <a href="fda.html">here</a>.</p>
+<p>Full details on how success criteria were established are available
+<a
+href="https://docs.google.com/document/d/1PLXJYoNS9LIqGoOeYPJ3FLJKO_m7l-XD3T82BRic9w8/edit?usp=sharing">here</a>.</p>
+<h2 id="results">Results</h2>
+<p>All success criteria were satisfied.</p>
+<ul>
+<li><strong>The Lin’s Concordance Correlation Coefficient has a value of
+&gt;0.9 for daily cough counts and cough-second counts.</strong>
+<ul>
+<li>Coughs: 0.971<br />
+</li>
+<li>Cough-seconds: 0.956</li>
+</ul></li>
+<li><strong>The Lin’s Concordance Correlation Coefficient has a value of
+&gt;0.9 for hourly cough and cough-second counts.</strong>
+<ul>
+<li>Coughs: 0.9748</li>
+<li>Cough-seconds: 0.9683<br />
+</li>
+</ul></li>
+<li><strong>Event-specific sensitivity has a median value of &gt;85%
+(coughs and cough-seconds) </strong>
+<ul>
+<li>Coughs: 87.34%<br />
+</li>
+<li>Cough-seconds: 90.48%<br />
+</li>
+</ul></li>
+<li><strong>Event-specific false positives per hour has a median value
+of &lt;2.5 (coughs and cough-seconds) </strong>
+<ul>
+<li>Coughs: 1.67<br />
+</li>
+<li>Cough-seconds: 1.56<br />
+</li>
+</ul></li>
+<li><strong>At least 75% of patients are correctly classified as low
+(0-10 per hour), medium-low (10-20 per hour), medium-high (20-30 per
+hour), or high (30+ per hour) rate coughers per their 24 hour
+counts.</strong>
+<ul>
+<li>Correctly classified, coughs: (83.87 %)<br />
+</li>
+<li>Correctly classified, coughs-seconds: (80.65 %)<br />
+</li>
+</ul></li>
+<li>Using the same categories, &gt;85% of patients are correctly
+classified or misclassified by only one ordinal level per their 24 hour
+counts.
+<ul>
+<li>Correctly classified or misclassified by only one ordinal level,
+individuals, coughs: 31 (100 %)<br />
+</li>
+<li>Correctly classified or misclassified by only one ordinal level,
+individuals, coughs-seconds: 31 (100 %)<br />
+</li>
+</ul></li>
+<li><strong>Using the same categories, &gt;85% of person-hours are
+correctly classified or misclassified by only one ordinal level.
+</strong>
+<ul>
+<li>Correctly classified hours, coughs: 686 (86.29 %)<br />
+</li>
+<li>Correctly classified hours, cough-seconds: 686 (86.29 %)<br />
+</li>
+<li>Correctly classified or misclassified by only one ordinal level,
+hours, coughs: 784 (98.62 %)<br />
+</li>
+<li>Correctly classified or misclassified by only one ordinal level,
+hours, cough-seconds: 787 (98.99 %)<br />
+</li>
+</ul></li>
+<li><strong>Patient-specific trends are correctly captured using the
+following method: (a) each patient’s hourly cough counts are binned by
+quartile using ground truth data (low being the 0-25th percentile
+coughs; medium-low being the 25-50th percentile coughs, etc.); for
+&gt;75% of patients, &gt;75% of their hours are correctly categorized
+into quartile bins by HCD, or misclassified by only one ordinal level.
+</strong>
+<ul>
+<li>Correctly classified hours, coughs: 621 (78.11%)<br />
+</li>
+<li>Correctly classified hours, cough-seconds: 628 (79.0%)<br />
+</li>
+<li>Correctly classified or misclassified by only one ordinal level,
+hours, coughs: 761 (95.72%)<br />
+</li>
+<li>Correctly classified or misclassified by only one ordinal level,
+hours, cough-seconds: 758 (95.35%)</li>
+</ul></li>
+</ul>
+</body>
+</html>

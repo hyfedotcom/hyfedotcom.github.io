@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>field</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="human-field-tests">Human field tests</h1>
+<p><a href="accuracy.html">Accuracy tests</a> demonstrate that a
+candidate model performs while on audio. But field tests (using human
+volunteers) are required to ensure that the model runs appropriately on
+device.</p>
+<p>Two kinds of on-device human field tests have been carried out:</p>
+<h2 id="test-set-up">Test set-up</h2>
+<ul>
+<li>TEST A: On a modified variant of the production software in which
+audio was retained so that a human annotator could count the number of
+coughs post-hoc and compare with device-generated counts:
+<ul>
+<li>17 distinct subjects</li>
+<li>Approximately 60 minutes of person-time (30 sessions of
+approximately 2 minutes; sessions were short and intentionally
+bout-filled)</li>
+<li>1,078 coughs (human annotated on audio files)</li>
+</ul></li>
+<li>TEST B: Testers noting the exact number of coughs during the time
+period in question (ie, no audio retention and no human labeling):
+<ul>
+<li>10 distinct subjects (some overlap with testers from test A)</li>
+<li>23.5 hours of person-time</li>
+<li>874 coughs (human reported)</li>
+</ul></li>
+</ul>
+<h2 id="test-results">Test results</h2>
+<h3 id="test-a">TEST A:</h3>
+<pre><code>- 1,078 coughs, from 17 subjects, mostly in bouts
+- 966 true positives (ie, sensitivity = 89.6%)
+- 9 false positives (mostly throat clears following cough bouts)</code></pre>
+<p>The below shows the correlation between true coughs (x-axis) and
+cough detections (y-axis) from Test A.</p>
+<p><img src="../img/field1.png" /></p>
+<p>The below shows time elapsed (x-axis) and cumulative coughs (y-axis)
+for both ground truth (black) and Hyfe (red) as data sources.</p>
+<p><img src="../img/field2.png" /></p>
+<h3 id="test-b">TEST B:</h3>
+<pre><code>- 874 coughs from 10 subjects
+- 830 detections
+- (No segregation of true vs false positives, given that “ground truth” was human reported session-wise counts, not human labels or event-specific timestamps)</code></pre>
+<p>The below shows reported coughs (x-axis) and cough detections
+(y-axis).</p>
+<p><img src="../img/field3.png" /></p>
+<h3 id="demographics">Demographics</h3>
+<p>The below shows the age / sex distribution of participants in the
+above tests.</p>
+<p><img src="../img/field4.png" /></p>
+</body>
+</html>

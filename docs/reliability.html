@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>reliability</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="reliability">Reliability</h1>
+<h2 id="test-re-test-reliability">Test / re-test reliability</h2>
+<p>Test–retest reliability is critical for a cough detector’s clinical
+utility because it establishes whether the device produces stable,
+repeatable cough counts when the underlying clinical reality has not
+changed. If a cough detector cannot reliably generate similar results
+under the same conditions, its data cannot be trusted for clinical or
+research use.</p>
+<h3 id="ensures-stability-of-measurement">Ensures Stability of
+Measurement</h3>
+<p>Test–retest reliability answers the question: Does the device give
+similar cough counts today and tomorrow when the person’s cough has not
+truly changed?</p>
+<p>If the counts fluctuate widely in stable conditions, the device is
+measuring noise, not cough. High test–retest reliability shows that the
+device’s outputs reflect the patient’s physiology, not random
+algorithmic or sensor variability.</p>
+<h3
+id="differentiates-true-clinical-change-from-device-error">Differentiates
+True Clinical Change From Device Error</h3>
+<p>Clinicians and researchers must detect real improvement or worsening.
+Reliable devices allow users to interpret:</p>
+<p>A reduction in cough as a real response to treatment, not a random
+drop from device inconsistency.</p>
+<p>A spike in cough as a true exacerbation, not an artifact.</p>
+<p>Without test–retest reliability, it’s impossible to know whether
+observed differences are biologically meaningful.</p>
+<h3 id="improves-research-validity-and-statistical-power">Improves
+Research Validity and Statistical Power</h3>
+<p>Inconsistent measurements increase noise in datasets, which:</p>
+<ul>
+<li>Reduces statistical power<br />
+</li>
+<li>Inflates sample size requirements<br />
+</li>
+<li>Obscures treatment effects</li>
+</ul>
+<p>High test–retest reliability means:<br />
+- Lower variance<br />
+- Smaller confidence intervals<br />
+- Smaller sample size<br />
+- Cleaner detection of clinically important differences</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Test–retest reliability is essential because a cough detector must
+produce stable cough counts when the patient hasn’t changed—otherwise it
+cannot support clinical interpretation, evaluate treatments, or reliably
+monitor disease over time.</p>
+<p>The below image shows test / re-test consistency (y-axis, correlation
+in cough rates between the two periods, as measured by the Pearson’s
+Correlation Coefficient) as a function of number of days of the test /
+re-test period (x-axis). This analysis was carried out in a population
+with no intervention (ie, expected clinical state = static).</p>
+<p><img src="../img/reliability1.png" /></p>
+</body>
+</html>
