@@ -55,9 +55,9 @@ What follows are items of evidence pertaining to the analytical validation of th
 | Validation           | [Wear vs non-wear: validation of Choi et al](docs/choi.html)                                         | Validates Choi et al algorithm for wear detection.            | —                                                       |
 | Validation           | [Wear vs non-wear: validation of Hyfe's PPG based algorithm](docs/ppg.html)                          | Validates Hyfe-specific PPG wear detection method.            | —                                                       |
 | Characterization     | [Characterization of known failure conditions: false positives and false negatives](docs/failure.html)                                                   | Describes qualitative evaluation of contexts for incorrect data.            | —                                                       |
-| Characterization     | Characterization of periods of expected poor performance (in progress)                               | Identifies known circumstances of reduced accuracy.           | —                                                       |
-| Characterization     | Time drift (in progress)                                                                             | Investigates timestamp drift and synchronization issues.      | —                                                       |
-| Challenge Testing    | Challenge testing (in progress)                                                                      | Documents stress and edge-case challenge testing.             | —                                                       |
+| Characterization     | Characterization of periods of expected poor performance                               | Identifies known circumstances of reduced accuracy (in progress).           | —                                                       |
+| Characterization     | Time drift                                                                             | Investigates timestamp drift and synchronization issues (in progress).      | —                                                       |
+| Challenge Testing    | Challenge testing                                                                      | Documents stress and edge-case challenge testing (in progress).              | —                                                       |
 | Protocol             | [Protocol for Dispersed Clinical Validation of the Hyfe Cough Monitoring System](docs/protocol.html) | Details protocol for dispersed clinical validation.           | Test Rig Architecture (linked within doc if applicable) |
 | Clinical Results     | [Results from Dispersed Clinical Validation of the Hyfe Cough Monitoring System](docs/fda.html)      | Reports results from dispersed clinical validation study.     | —                                                       |
 
@@ -101,11 +101,11 @@ What follows are evidence points demonstrating that the technology which forms t
 | -------------------- | -------------------------------------------- | --------------------------------------------------------- | ------------------------------------ |
 | Summary              | [Usability summary](docs/usability.html)     | Summarizes usability testing findings.                    | —                                    |
 | User Materials       | [User‑facing materials](docs/usermaterials.html)           | Recruitment/onboarding/IFU materials supporting HFE work. | Informed consent template; Participant brochure; Site manual; Site online training manual |
-| Specification        | Use specification for all user groups        | Defines user types, contexts, tasks.                      | —                                    |
-| URRA                 | Use-related risk analysis (URRA)             | Identifies hazards and mitigations.                       | —                                    |
-| Testing results      | Usability testing                            | Iterative evaluation of usability pain points.            | —                                    |
-| Field Metrics        | Field adherence & missing-data metrics       | Analyzes adherence and data completeness.                 | —                                    |
-| Accessibility        | Accessibility & inclusion evidence           | Evaluates usability across diverse populations.           | —                                    |
+| Specification        | Use specification for all user groups        | Defines user types, contexts, tasks (in progress).                      | —                                    |
+| URRA                 | Use-related risk analysis (URRA)             | Identifies hazards and mitigations (in progress).                       | —                                    |
+| Testing results      | Usability testing                            | Iterative evaluation of usability pain points (in progress).            | —                                    |
+| Field Metrics        | Field adherence & missing-data metrics       | Analyzes adherence and data completeness (in progress).                 | —                                    |
+| Accessibility        | Accessibility & inclusion evidence           | Evaluates usability across diverse populations (in progress).           | —                                    |
 
 ---
 
