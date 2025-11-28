@@ -18,15 +18,15 @@ What follows are tests, experiments, and processes carried out by Hyfe to verify
 
 | Document Type       | Document Name                                                       | Brief Description                                                      | Further Documents |
 | ------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
-| Test Result         | [Equivalence of uniform gain across microphones](docs/gain.html)    | Tests consistency of gain levels across device microphones.            | MSM261D3526Z1CM microphone data sheet               |
-| Test Result         | [Equivalence of microphone frequency-response curve](docs/frc.html) | Evaluates consistency of frequency response curves across microphones. | —                 |
-| Test Result         | [Environmental durability](docs/environmental.html)                 | Assesses device durability across environmental conditions.            | —                 |
-| Test Result         | [Pre‑flight tests](docs/preflight.html)                             | Routine tests ensuring hardware and firmware readiness pre‑deployment. | Test-architecture; Pre-flight checklist; Test rig                 |
-| SOP / Requirements  | [Software Requirements Specifications](docs/requirements.html)      | Defines software functional and non-functional requirements.           | —                 |
-| QMS / Validation    | [Quality management and design validation](docs/qms.html)           | Documents QMS processes and design validation framework.               | Quality policy; Design validation protocol —                 |
-| Traceability        | [Requirements traceability](docs/traceability.html)          | Maps requirements to tests ensuring coverage.                          | —                 |
-| Safety Verification | [Electrical safety verification](docs/electrical.html)              | Documents tests ensuring compliance with electrical safety standards.  | Electrical safety testing report                 |
-| Cybersecurity       | [Cybersecurity verification](docs/cybersecurity.html)               | Evaluates cybersecurity protections and testing.                       | Cybersecurity reports for Android, iOS, and API                 |
+| Test Result         | [Equivalence of uniform gain across microphones](docs/gain.html)    | Tests consistency of gain levels across device microphones            | MSM261D3526Z1CM microphone data sheet               |
+| Test Result         | [Equivalence of microphone frequency-response curve](docs/frc.html) | Evaluates consistency of frequency response curves across microphones | —                 |
+| Test Result         | [Environmental durability](docs/environmental.html)                 | Assesses device durability across environmental conditions            | —                 |
+| Test Result         | [Pre‑flight tests](docs/preflight.html)                             | Routine tests ensuring hardware and firmware readiness pre‑deployment | Test-architecture; Pre-flight checklist; Test rig                 |
+| SOP / Requirements  | [Software Requirements Specifications](docs/requirements.html)      | Defines software functional and non-functional requirements           | —                 |
+| QMS / Validation    | [Quality management and design validation](docs/qms.html)           | Documents QMS processes and design validation framework               | Quality policy; Design validation protocol —                 |
+| Traceability        | [Requirements traceability](docs/traceability.html)          | Maps requirements to tests ensuring coverage                          | —                 |
+| Safety Verification | [Electrical safety verification](docs/electrical.html)              | Documents tests ensuring compliance with electrical safety standards  | Electrical safety testing report                 |
+| Cybersecurity       | [Cybersecurity verification](docs/cybersecurity.html)               | Evaluates cybersecurity protections and testing                       | Cybersecurity reports for Android, iOS, and API                 |
 
 ---
 
@@ -48,13 +48,13 @@ What follows are items of evidence pertaining to the analytical validation of th
 | Field Test           | [Cough detection accuracy in human field tests](docs/field.html)                                     | Tests algorithm accuracy in field deployment.                 | —                                                       |
 | Test Result          | [Effect of distance on cough detection](docs/distance.html)                                          | Examines how distance from device impacts accuracy.           | —                                                       |
 | Test Result          | [Effect of non-user coughs on user cough counts](docs/opc.html)                                      | Quantifies influence of other people's coughs on results.     | White paper; poster                                                       |
-| Test Result          | [Effect of garment obstruction/muffling on cough detection](docs/garments.html)                      | Evaluates effects of clothing barriers. (in progress)                       | —                                                       |
-| Test Result          | [Effect of cough volume on cough detection](docs/volume.html)                                        | Analyzes impact of cough loudness on detection. (in progress)               | —                                                       |
+| Test Result          | [Effect of garment obstruction/muffling on cough detection](docs/garments.html)                      | Evaluates effects of clothing barriers (in progress)                       | —                                                       |
+| Test Result          | [Effect of cough volume on cough detection](docs/volume.html)                                        | Analyzes impact of cough loudness on detection (in progress)               | —                                                       |
 | Version Control      | [Version control & change management for model](docs/version.html)                                   | Documents model version tracking and update processes.        | —                                                       |
 | Performance Standard | [Performance / acceptability thresholds](docs/performance.html)                                      | Defines acceptable analytical performance thresholds.         | —                                                       |
 | Validation           | [Wear vs non-wear: validation of Choi et al](docs/choi.html)                                         | Validates Choi et al algorithm for wear detection.            | —                                                       |
 | Validation           | [Wear vs non-wear: validation of Hyfe's PPG based algorithm](docs/ppg.html)                          | Validates Hyfe-specific PPG wear detection method.            | —                                                       |
-| Characterization     | [Characterization of known failure conditions: false positives and false negatives](docs/failure.html)                                                   | Describes qualitative evaluation of contexts for incorrect data.            | —                                                       |
+| Characterization     | [Characterization of known failure conditions: false positives and false negatives](docs/failure.html)                                                   | Describes qualitative evaluation of contexts for incorrect data            | —                                                       |
 | Characterization     | Characterization of periods of expected poor performance                               | Identifies known circumstances of reduced accuracy (in progress).           | —                                                       |
 | Characterization     | Time drift                                                                             | Investigates timestamp drift and synchronization issues (in progress).      | —                                                       |
 | Challenge Testing    | Challenge testing                                                                      | Documents stress and edge-case challenge testing (in progress).              | —                                                       |
@@ -75,13 +75,13 @@ The following contains information on the clinical meaningfulness of the CMS' me
 
 | Document Type     | Document Name                                                               | Brief Description                                               | Further Documents |
 | ----------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------------- |
-| Evidence Summary  | [Meaningfulness to patients & clinicians](docs/meaningfulness.html)         | Demonstrates relevance and interpretability of measures.        | —                 |
-| Validation        | [Reliability & responsiveness in target population](docs/reliability.html)  | Presents reliability and responsiveness metrics.                | —                 |
-| Correlation Study | [Endpoint correlation](docs/endpoint.html)                                  | Shows correlation between cough metrics and clinical endpoints. | —                 |
-| MCID              | [Minimal clinically important difference estimation (MCID)](docs/mcid.html) | Estimates MCID for cough frequency changes.                     | —                 |
-| RWE               | [Real-world implementation impact](docs/realworld.html)                     | Evaluates device performance and impact in real-world use (in progress).      | —                 |
-| Comparison        | [Comparison with patient recall](docs/recall.html)                          | Compares measured cough vs patient recall accuracy.             | —                 |
-| Usage Study       | [Monitoring duration](docs/duration.html)                                   | Evaluates optimal monitoring duration for clinical insight.     | —                 |
+| Evidence Summary  | [Meaningfulness to patients & clinicians](docs/meaningfulness.html)         | Demonstrates relevance and interpretability of measures        | —                 |
+| Validation        | [Reliability & responsiveness in target population](docs/reliability.html)  | Presents reliability and responsiveness metrics                | —                 |
+| Correlation Study | [Endpoint correlation](docs/endpoint.html)                                  | Shows correlation between cough metrics and clinical endpoints | —                 |
+| MCID              | [Minimal clinically important difference estimation (MCID)](docs/mcid.html) | Estimates MCID for cough frequency changes                     | —                 |
+| RWE               | [Real-world implementation impact](docs/realworld.html)                     | Evaluates device performance and impact in real-world use (in progress)      | —                 |
+| Comparison        | [Comparison with patient recall](docs/recall.html)                          | Compares measured cough vs patient recall accuracy             | —                 |
+| Usage Study       | [Monitoring duration](docs/duration.html)                                   | Evaluates optimal monitoring duration for clinical insight     | —                 |
 
 ---
 
@@ -99,13 +99,13 @@ What follows are evidence points demonstrating that the technology which forms t
 
 | Document Type        | Document Name                                | Brief Description                                         | Further Documents                    |
 | -------------------- | -------------------------------------------- | --------------------------------------------------------- | ------------------------------------ |
-| Summary              | [Usability summary](docs/usability.html)     | Summarizes usability testing findings.                    | —                                    |
-| User Materials       | [User‑facing materials](docs/usermaterials.html)           | Recruitment/onboarding/IFU materials supporting HFE work. | Informed consent template; Participant brochure; Site manual; Site online training manual |
-| Specification        | Use specification for all user groups        | Defines user types, contexts, tasks (in progress).                      | —                                    |
-| URRA                 | Use-related risk analysis (URRA)             | Identifies hazards and mitigations (in progress).                       | —                                    |
-| Testing results      | Usability testing                            | Iterative evaluation of usability pain points (in progress).            | —                                    |
-| Field Metrics        | Field adherence & missing-data metrics       | Analyzes adherence and data completeness (in progress).                 | —                                    |
-| Accessibility        | Accessibility & inclusion evidence           | Evaluates usability across diverse populations (in progress).           | —                                    |
+| Summary              | [Usability summary](docs/usability.html)     | Summarizes usability testing findings                    | —                                    |
+| User Materials       | [User‑facing materials](docs/usermaterials.html)           | Recruitment/onboarding/IFU materials supporting HFE work | Informed consent template; Participant brochure; Site manual; Site online training manual |
+| Specification        | Use specification for all user groups        | Defines user types, contexts, tasks (in progress)                      | —                                    |
+| URRA                 | Use-related risk analysis (URRA)             | Identifies hazards and mitigations (in progress)                       | —                                    |
+| Testing results      | Usability testing                            | Iterative evaluation of usability pain points (in progress)            | —                                    |
+| Field Metrics        | Field adherence & missing-data metrics       | Analyzes adherence and data completeness (in progress)                 | —                                    |
+| Accessibility        | Accessibility & inclusion evidence           | Evaluates usability across diverse populations (in progress)           | —                                    |
 
 ---
 
