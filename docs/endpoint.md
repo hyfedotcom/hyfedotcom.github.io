@@ -1,0 +1,50 @@
+# Endpoint correlation
+
+Objective cough frequency correlates with clinically meaningful outcomes and measures.
+
+In "Digital cough monitoring – A potential predictive acoustic biomarker of clinical outcomes in hospitalized COVID-19 patients", Altshuler et al demonstrate that cough counts are predictors for clinical outcomes in a large cohort of prospectively-monitored Covid-19 patients. Link to full article: https://pmc.ncbi.nlm.nih.gov/articles/PMC9827741/
+
+Many other independent research studies have demonstrated cough counts correlating with clinical outcomes or established clinical measures, such as disease severity, treatment response, or patient-reported symptom scores. A sample of these is below:
+
+
+    1. Decalmer, S. C., Webster, D., Kelsall, A. A., McGuinness, K., Woodcock, A. A., & Smith, J. A. (2007). Chronic cough: how do cough reflex sensitivity and subjective assessments correlate with objective cough counts during ambulatory monitoring? Thorax, 62(4), 329–334.   
+Link: https://doi.org/10.1136/thx.2006.067413  
+
+Summary: In this study of patients with chronic cough, objectively recorded cough frequency was compared to various clinical measures. The strongest association was an inverse correlation between 24-hour cough count and cough-related quality of life (Leicester Cough Questionnaire scores), with higher cough frequencies corresponding to worse quality of life (r = –0.62, p ≤ 0.001)[1][2]. By contrast, patients’ self-rated cough severity and cough reflex sensitivity (capsaicin test) showed only moderate correlations with the actual cough counts[3][4]. This suggests that objective cough counts closely reflect the impact of cough on patients’ daily functioning, whereas subjective estimates alone are less reliable.
+
+
+    2. Schelfhout, J., Nguyen, A. M., Birring, S. S., Bacci, E. D., Vernon, M., Muccino, D. R., La Rosa, C., & Smith, J. A. (2022). Validation and meaningful change thresholds for an objective cough frequency measurement in chronic cough. Lung, 200(6), 717–724.  
+Link: https://doi.org/10.1007/s00408-022-00587-2  
+
+Summary: This clinical trial analysis examined how changes in objective cough counts relate to patient-reported outcomes in chronic cough. It found that 24-hour cough frequencies had significant but modest correlations with cough severity ratings, diary scores, and quality-of-life questionnaires at baseline and during treatment (Spearman ρ ~0.30–0.58)[5]. Importantly, patients who reported substantial improvement on a global scale had large reductions in cough count: those “much/very much improved” showed about a 55% drop in cough frequency, while “minimally improved” patients had ~30% drops[5][6]. Receiver-operator analysis determined that roughly a 38% decrease in cough frequency optimally predicted a meaningful improvement, and the authors proposed a ≥30% cough count reduction as a reasonable threshold for clinically significant treatment response[7][6]. Thus, objective cough monitoring was validated as an outcome measure that tracks with symptom improvement in chronic cough trials.
+
+
+    3. Key, A. L., Holt, K., Hamilton, A., Smith, J. A., & Earis, J. E. (2010). Objective cough frequency in idiopathic pulmonary fibrosis. Cough, 6, Article 4.
+Link: https://doi.org/10.1186/1745-9974-6-4  
+
+Summary: This study focused on idiopathic pulmonary fibrosis (IPF) and measured patients’ cough counts over 24 hours alongside clinical assessments. IPF patients had high cough rates, and these objective counts showed strong correlations with patient-reported cough measures: daytime cough frequency correlated with visual analog scale (VAS) ratings of cough severity (r ≈ 0.80, p < 0.001) and with cough-specific quality of life (LCQ, r = –0.80, p < 0.001)[8]. Notably, objective cough frequency did not correlate with lung function indices (such as spirometry results) in these patients[8]. This indicates that while cough count is closely tied to how severe and bothersome patients perceive their cough to be, it operates independently of traditional physiological markers. In IPF, cough frequency thus reflects symptomatic burden and quality-of-life impact rather than disease extent on pulmonary function tests[9][10].
+
+
+    4. Spinou, A., Lee, K. K., Sinha, A., Elston, C., Loebinger, M. R., … Birring, S. S. (2017). The objective assessment of cough frequency in bronchiectasis. Lung, 195(5), 575–585.  
+Link: https://doi.org/10.1007/s00408-017-0038-x  
+
+Summary: In patients with bronchiectasis, 24-hour cough monitoring was used to quantify cough and relate it to clinical outcomes. Cough counts were markedly higher in bronchiectasis patients than in healthy controls, and higher cough frequency was associated with significantly worse health status. In particular, objective cough counts correlated inversely with scores on the Leicester Cough Questionnaire and the Bronchiectasis Health Questionnaire (greater cough frequency = lower quality of life; LCQ r = –0.52, BHQ r = –0.62, both p < 0.001)[11]. Patients who coughed more also tended to have more sputum production and more frequent exacerbations requiring antibiotics, factors which together with age explained over half the variance in cough frequency[12]. There was no significant link between cough count and lung function measurements in these patients[12]. These results suggest that in bronchiectasis, objective cough frequency tracks with symptom burden and disease impact (like infections and daily respiratory symptoms) better than traditional lung function indices, supporting cough counts as a useful outcome measure of disease severity in this context.
+
+
+    5. Proaño, A., Bravard, M. A., López, J. W., Lee, G. O., Comina, G., … Gilman, R. H. (2017). Dynamics of cough frequency in adults undergoing treatment for pulmonary tuberculosis. Clinical Infectious Diseases, 64(9), 1174–1181.  
+Link: https://doi.org/10.1093/cid/cix039  
+
+Summary: This prospective cohort study in pulmonary tuberculosis (TB) patients demonstrated that objective cough monitoring correlates with both disease severity and treatment response. At diagnosis, patients with higher Mycobacterium tuberculosis loads (as indicated by quantitative cultures) had significantly more frequent coughing on average[13]. As TB treatment commenced, cough frequency dropped rapidly: the median cough rate fell by about 80% after 2 weeks of therapy (from ~2.3 episodes/hour pre-treatment to ~0.5/hour at day 14)[13]. This early reduction in coughing paralleled microbiological improvement – approximately one-third of patients had converted to negative cultures by the 14-day point[14][15]. By the end of the two-month observation, cough counts had decreased further in those responding to treatment[13]. The findings illustrate that an objective cough count is closely aligned with TB disease activity: a high cough count signals greater infectious burden, and a declining cough count reflects effective treatment and reduced infectiousness[15]. This supports using cough frequency as a quantitative indicator of patient prognosis and response in TB management.  
+
+[1] [2] [3] [4] Chronic cough: how do cough reflex sensitivity and subjective assessments correlate with objective cough counts during ambulatory monitoring? - PubMed
+https://pubmed.ncbi.nlm.nih.gov/17101736/
+[5] [6] [7] Validation and Meaningful Change Thresholds for an Objective Cough Frequency Measurement in Chronic Cough - PubMed
+https://pubmed.ncbi.nlm.nih.gov/36348054/
+[8] [9] [10] Objective cough frequency in Idiopathic Pulmonary Fibrosis | Cough
+https://link.springer.com/article/10.1186/1745-9974-6-4
+[11] [12] The Objective Assessment of Cough Frequency in Bronchiectasis - PubMed
+https://pubmed.ncbi.nlm.nih.gov/28707107/
+[13] [14] [15] Dynamics of Cough Frequency in Adults Undergoing Treatment for Pulmonary Tuberculosis - PubMed
+https://pubmed.ncbi.nlm.nih.gov/28329268/
+
+

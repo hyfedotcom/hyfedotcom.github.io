@@ -1,0 +1,134 @@
+/* ===== Academic Document Style ===== */
+
+/* Base layout */
+body {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.55;
+    color: #222;
+    background: #fafafa;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-family: "Garamond", "Georgia", serif;
+    font-weight: 600;
+    color: #111;
+    margin-top: 2.2em;
+    margin-bottom: 0.6em;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.4rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 0.2rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+/* Paragraphs */
+p {
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+/* Links */
+a {
+    color: #0645AD;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+th {
+    background: #f0f0f0;
+    font-weight: 600;
+    border-bottom: 2px solid #aaa;
+    padding: 0.6rem;
+    text-align: left;
+    font-family: "Garamond", "Georgia", serif;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 0.6rem;
+}
+
+tr:nth-child(even) td {
+    background: #f8f8f8;
+}
+
+tr:hover td {
+    background: #f1f1f1;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+li {
+    margin: 0.4rem 0;
+}
+
+/* Code blocks */
+pre, code {
+    font-family: "Courier New", monospace;
+    background: #f4f4f4;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Subtle horizontal rule */
+hr {
+    margin: 2.5rem 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Sidenotes (if used) */
+.sidenote {
+    font-size: 0.85rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Improve readability on large screens */
+@media (min-width: 1200px) {
+    body {
+        max-width: 900px;
+        font-size: 18px;
+    }
+}
+
+/* Make all images exactly the width of the text column */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+}
+
