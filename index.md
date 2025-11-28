@@ -1,7 +1,5 @@
 <link rel="stylesheet" href="style.css">
 
-# Hyfe CoughMonitor Suite (CMS) V3+ Evidence Dossier
-
 
 
 ---

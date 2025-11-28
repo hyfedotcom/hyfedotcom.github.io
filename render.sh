@@ -38,7 +38,7 @@ EOF
 
     echo "Converting: $mdfile -> $htmlfile (css: $css_rel_path)"
 
-    pandoc "$mdfile" -o "$htmlfile" --css "$css_rel_path" --standalone --include-in-header="$ROOT_DIR/head.html" --metadata title="Hyfe CMS V3+ Evidence Dossier"
+    pandoc "$mdfile" -o "$htmlfile" --css "$css_rel_path" --standalone --include-in-header="$ROOT_DIR/head.html" --metadata title="Hyfe CoughMonitor Suite (CMS) V3+ Evidence Dossier"
 
 done
 
